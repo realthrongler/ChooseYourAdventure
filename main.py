@@ -167,7 +167,38 @@ if choice == "1":
             print("You jump overboard, returning home in shame. Mr.Lamb was too powerful for your mere mortal mind to handle.")
 elif choice == "2":
     #guard disguise route
-    print()
+    print("You find a lone guard at the docks and knock them out, stealing their uniform.")
+    time.sleep(regular_delay)
+    print("It's about 6 sizes too small, but nobody will notice")
+    time.sleep(regular_delay)
+    print("You make your way onto the boat, acting natural.")
+    time.sleep(regular_delay)
+    print("A guard notices that your uniform is 6 sizes too small!")
+    time.sleep(regular_delay)
+    print('"Hey! What\'s wrong with your uniform?"')
+    time.sleep(regular_delay)
+    print("1. Flirt")
+    print("2. Lie")
+    time.sleep(short_delay)
+    choice = input("What do you do?\n")
+    if choice == "1":
+        #flirt route
+        print("You remember Mr.Nagra's masterclass on flirting, and conjure up a line sure to seduce this guard.")
+        time.sleep(regular_delay)
+        print('"Hey, are you a toilet? Because you\'re so skibidi"')
+        time.sleep(long_delay)
+        print("...")
+        time.sleep(long_delay)
+        print("...")
+        time.sleep(long_delay)
+        print("...")
+        time.sleep(long_delay)
+        print(Fore.RED + "you are shot and killed." + Style.RESET_ALL)
+    elif choice == "2":
+        #lie route
+        print('"My uniform got shrunk in the laundry" you say')
+        time.sleep(regular_delay)
+
 else:
     print("Error, please try again.")
     choice = input("Please enter '1' or '2'.\n")
