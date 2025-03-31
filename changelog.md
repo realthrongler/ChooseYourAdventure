@@ -15,3 +15,8 @@
 30/03/25
 - Added the use of the colorama module
 - Added the 5th ending
+
+31/03/25
+- Added the rest of the endings
+- Reworded specific parts of the story to flow better
+- A little more use of colorama
