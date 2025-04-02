@@ -20,3 +20,10 @@
 - Added the rest of the endings
 - Reworded specific parts of the story to flow better
 - A little more use of colorama
+
+01/04/25
+- Finished the program
+- Added messages so you know that the program is actually finished
+- Small quality of life changes to handle small accidental inputs
+- Changed a delay in the beginning of the program because it was too short, now more readable
+- More use of the colorama module
