@@ -14,7 +14,7 @@ door_code = random.randint(1,100)
 #game start
 start_game = input("Type 'start' to begin the game\n")
 
-while start_game != "start":
+while start_game.strip().lower() != "start":
     print("You need to type 'start' to start the game.")
     start_game = input("Type 'start' to begin (please)\n")
 
@@ -24,7 +24,7 @@ time.sleep(regular_delay)
 print('"The yacht you are looking at right now is owned by the world\'s biggest supervillain, Mr.Lamb."')
 time.sleep(regular_delay)
 print('"We have actionable intel that he is up to something... something very devious."')
-time.sleep(short_delay)
+time.sleep(regular_delay)
 print("You need to sneak on, find out what that is, and report back to us.")
 time.sleep(regular_delay)
 print("Good luck!")
@@ -37,7 +37,7 @@ print("1. Swim up and sneak onto the boat")
 print("2. Disguise yourself as a guard and walk onto the boat")
 
 choice = input("Please enter '1' or '2'.\n")
-if choice == "1":
+if choice.strip().lower() == "1":
 
     #Swimming route
     print("You delve into the biting cold of the ocean water, accompanied only by the hiss of your oxygen mask.")
@@ -54,7 +54,7 @@ if choice == "1":
     time.sleep(short_delay)
     print("2. Go downstairs")
     choice = input("Please enter '1' or '2'.\n")
-    if choice == "1":
+    if choice.strip().lower() == "1":
 
         #Upstairs route
         print("You climb the stairs and reach what appears to be a break room.")
@@ -74,7 +74,7 @@ if choice == "1":
         print('"Mr.Lamb and his plans are elsewhere, but let me ask you one thing."')
         time.sleep(regular_delay)
         choice = input('"Do you like my game?" y/n\n')
-        if choice == "yes" or "y":
+        if choice.strip().lower() == "yes" or "y":
 
             #I love this amazing game route
             print('"Good choice"')
@@ -94,11 +94,11 @@ if choice == "1":
             print("You decide the only reasonable course of action is to keep trying numbers until you unlock it.")
 
             #Bank door unlock simulator (extremely fun game mechanic)
-            while choice != door_code:
+            while choice.strip() != door_code:
                 choice = int(input("What number do you input?\n"))
-                if choice == door_code:
+                if choice.strip() == door_code:
                     break
-                elif choice == 69:
+                elif choice.strip() == 69:
                     break
                 else:
                     print("Looks like that didn't work.")
@@ -111,14 +111,18 @@ if choice == "1":
             print("3 guards hold up signs with '10' on them. Perfect score!")
             time.sleep(regular_delay)
             print("Congratulations! You have successfully retrieved the devious plans of Mr.Lamb successfully,\nthe contents of which will be revealed in the sequel.\n(sold separately)")
-            
-        elif choice == "no" or "n":
+            time.sleep(long_delay)
+            time.sleep(long_delay)
+            print(Fore.LIGHTBLUE_EX + "Good ending!" + Style.RESET_ALL)
+        elif choice.strip().lower() == "no" or "n":
 
             #I wouldn't know art if it slapped me in the face route
             print('"Oh... alright then."')
             time.sleep(long_delay)
             print("You die of a heart attack.")
-    elif choice == "2":
+            time.sleep(long_delay)
+            print(Fore.LIGHTBLUE_EX + "Bad ending :(" + Style.RESET_ALL)
+    elif choice.strip().lower() == "2":
 
         #Downstairs route
         print("You descend the stairs, reaching a room filled with servers and computers and blinking lights (for cinematic effect)")
@@ -143,7 +147,7 @@ if choice == "1":
         print("2. Run away (he is extremely menacing)")
         time.sleep(long_delay)
         choice = input("What do you do?\n")
-        if choice == "1":
+        if choice.strip().lower() == "1":
 
             #Confrontation route
             print("You come out of the shadows, ready to strike.")
@@ -162,7 +166,10 @@ if choice == "1":
             print("You steal as many files as you can from his computer, making an extremely close escape.")
             time.sleep(regular_delay)
             print("You get back to your base of operations successfully. Sifting through many pirated games, you find Mr.Lamb's evil plans,\n the contents of which will be revealed in the sequel\n(sold separately)")
-        elif choice == "2":
+            time.sleep(long_delay)
+            time.sleep(long_delay)
+            print(Fore.LIGHTBLUE_EX + "Good ending!" + Style.RESET_ALL)
+        elif choice.strip().lower() == "2":
 
             #Run away route
             print("You find yourself shaking in your boots because of his menacing aura.")
@@ -172,7 +179,10 @@ if choice == "1":
             print("You run as fast as you can, shoving guards out of the way, even though you never saw one on the way here.")
             time.sleep(long_delay)
             print("You jump overboard, returning home in shame. Mr.Lamb was too powerful for your mere mortal mind to handle.")
-elif choice == "2":
+            time.sleep(long_delay)
+            print(Fore.LIGHTBLUE_EX + "Bad ending :(" + Style.RESET_ALL)
+
+elif choice.strip().lower() == "2":
 
     #guard disguise route
     print("You find a lone guard at the docks and knock them out, stealing their uniform.")
@@ -189,7 +199,7 @@ elif choice == "2":
     print("2. Lie")
     time.sleep(short_delay)
     choice = input("What do you do?\n")
-    if choice == "1":
+    if choice.strip().lower() == "1":
 
         #flirt route
         print("You remember Mr.Nagra's masterclass on flirting, and conjure up a line sure to seduce this guard.")
@@ -203,7 +213,10 @@ elif choice == "2":
         print("...")
         time.sleep(long_delay)
         print(Fore.RED + "you are shot and killed." + Style.RESET_ALL)
-    elif choice == "2":
+        time.sleep(long_delay)
+        print(Fore.LIGHTBLUE_EX + "Yikes man I don't even know what ending this is" + Style.RESET_ALL)
+
+    elif choice.strip().lower() == "2":
 
         #lie route
         print('"My uniform got shrunk in the laundry" you say')
@@ -219,7 +232,7 @@ elif choice == "2":
         print("1. Go through the door")
         print("2. Look elsewhere")
         choice = input("What do you do?\n")
-        if choice == "1":
+        if choice.strip().lower() == "1":
 
             #enter the door route
             print("You open the door and go through, realizing there is nothing beneath your feet.")
@@ -227,7 +240,9 @@ elif choice == "2":
             print('"That door just goes out the side of the boat!" You realize, as you plummet into the ocean')
             time.sleep(regular_delay)
             print("Due to a very deceptive door, you return home empty handed. Who does something like that anyway???")
-        elif choice == "2":
+            time.sleep(long_delay)
+            print(Fore.LIGHTBLUE_EX + '"Bruh" ending' + Style.RESET_ALL)
+        elif choice.strip().lower() == "2":
 
             #go somewhere else route
             print("You decide it's better to heed the door's warning and look elsewhere.")
@@ -241,7 +256,7 @@ elif choice == "2":
             print("1. Try to hide")
             print("2. Appear like you're supposed to be there")
             choice = input("What do you do?\n")
-            if choice == "1":
+            if choice.strip().lower() == "1":
 
                 #hide attempt route
                 print("You look around frantically, searching for a spot to hide, but there's no good spots!")
@@ -261,7 +276,9 @@ elif choice == "2":
                 print('"I\'ll deal with you later. Right now, I have more pressing concerns." Mr.Lamb gets up, and walks out of the room.')
                 time.sleep(regular_delay)
                 print("You have fallen into the hands of the villainous villain, Mr.Lamb, but his attention was drawn away by something else. What could've happened?")
-            elif choice == "2":
+                time.sleep(long_delay)
+                print(Fore.LIGHTBLUE_EX + "Bad ending :(" + Style.RESET_ALL)
+            elif choice.lower().strip() == "2":
 
                 #nonchalant dreadhead route
                 print("You walk as if you're supposed to be there, ignoring the guards and continuing on your way.")
@@ -296,7 +313,11 @@ elif choice == "2":
                 time.sleep(long_delay)
                 print("You have no choice but to return home, although, not empty handed.")
                 time.sleep(long_delay)
+
+                #Had to make her a plot point for the memes
                 print("This mysterious new adversary, " + Fore.GREEN + "Clara " + Style.RESET_ALL + "will not be disappearing any time soon.")
+                time.sleep(long_delay)
+                print(Fore.LIGHTBLUE_EX + "To be continued?" + Style.RESET_ALL)
 else:
     print("Error, please try again.")
     choice = input("Please enter '1' or '2'.\n")
